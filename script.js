@@ -1,34 +1,46 @@
-
+var currentNum = '';
+var currentOp = '';
 
 const numberBtn = document.querySelectorAll('.num');
 const equals = document.getElementById('equals');
-const currentOp = document.getElementById('display-entered');
+const currentDisplay = document.getElementById('display-entered');
 const operandBtn = document.querySelectorAll('.operand');
 const clearBtn = document.getElementById("clear");
-const deleteBtn = document.getElementById("delete")
+const deleteBtn = document.getElementById("delete");
 
 numberBtn.forEach((button) =>
-button.addEventListener('click', () => displayNum(button.textContent))
+button.addEventListener('click', () => {
+    displayOperand(button.textContent);
+    currentNum = button.textContent})
 )
 
 operandBtn.forEach((button) =>
-button.addEventListener('click', () => displayOperand(button.textContent))
-)
+button.addEventListener('click', () => {
+    displayOperand(button.textContent);
+    currentOp = button.textContent})
+);
 
 clearBtn.addEventListener('click', resetScreen)
 
 function displayNum(number){
-    currentOp.textContent === '0' ? 
-    currentOp.textContent += number:
+    currentDisplay.textContent === '0' ? 
+    currentDisplay.textContent += number:
     resetScreen ;
 }
 
 function displayOperand(operand){
-    currentOp.textContent += operand;
+    currentDisplay.textContent += operand;
 }
  
 function resetScreen(){
-    currentOp.textContent = '';
+    currentDisplay.textContent = '0';
+}
+
+console.log(currentNum)
+console.log(currentOp)
+
+function evaluate() {
+
 }
 
 
