@@ -1,0 +1,95 @@
+:root {
+    --primary-light: #ddd;
+    --primary-dark: #222831;
+    --secondary-dark: #393e46;
+    --secondary-dark-hover: #4a4f57;
+    --primary-blue: rgb(99, 99, 237);
+    --primary-red: rgb(237, 75, 99);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    background-color: var(--primary-light);
+    color: var(--primary-light);
+    font-family: -apple-system, BlinkMacSystemFont, “Segoe UI”, “Roboto”, “Oxygen”, “Ubuntu”, “Cantarell”, “Fira Sans”, “Droid Sans”, “Helvetica Neue”, sans-serif;
+    text-align: center;
+    margin-bottom: 100px;
+}
+.main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 75vh;
+    /* min-height: 500px;
+    padding: 10px;
+    margin-top: 50px; */
+}
+
+button {
+    font-family: inherit;
+    font-size: inherit;
+    cursor: pointer;
+    height: 50px;
+    border: 2px solid;
+    border-radius: 5px;
+  }
+
+  .calc-container {
+    width: 400px;
+    padding: 20px;
+    margin: 0 auto;
+    background-color: var(--primary-dark);
+    border-radius: 5px;
+  }
+
+  .display{
+    padding: 10px 20px;
+    border: 2px solid;
+    border-radius: 5px;
+    margin-bottom:20px;
+    text-align: right;
+    background-color: var(--primary-light);
+}
+
+.display-log{
+    min-height: 36px;
+    font-size: 20px;
+}
+
+.display-entered{
+    min-height: 64px;
+    font-size: 40px;
+    color: black
+  }
+
+
+  .grid_container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 5px;
+  }
+  .clear-btn{
+    grid-column-start: 1;
+    grid-column-end: 3;
+    background-color: var(--primary-red);
+  }
+
+  .delete-btn{
+    grid-column-start: 3;
+    grid-column-end: 5;
+    background-color: var(--primary-blue);
+  }
+  
+  
